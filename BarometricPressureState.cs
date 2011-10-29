@@ -1,0 +1,1 @@
+﻿public enum BarometricPressureState : byte { Steady, Rising, Falling };

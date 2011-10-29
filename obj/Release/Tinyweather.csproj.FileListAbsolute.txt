@@ -1,0 +1,5 @@
+D:\Dropbox\Dropbox\George Robotics\YahooWheatherLib\bin\Release\Tinyweather.dll
+D:\Dropbox\Dropbox\George Robotics\YahooWheatherLib\bin\Release\Tinyweather.pdb
+D:\Dropbox\Dropbox\George Robotics\YahooWheatherLib\obj\Release\ResolveAssemblyReference.cache
+D:\Dropbox\Dropbox\George Robotics\YahooWheatherLib\obj\Release\Tinyweather.dll
+D:\Dropbox\Dropbox\George Robotics\YahooWheatherLib\obj\Release\Tinyweather.pdb

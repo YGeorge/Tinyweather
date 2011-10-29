@@ -1,0 +1,10 @@
+D:\projects\silverlight\YahooWheatherLib\bin\Debug\YahooWheatherLib.dll
+D:\projects\silverlight\YahooWheatherLib\bin\Debug\YahooWheatherLib.pdb
+D:\projects\silverlight\YahooWheatherLib\obj\Debug\ResolveAssemblyReference.cache
+D:\projects\silverlight\YahooWheatherLib\obj\Debug\YahooWheatherLib.dll
+D:\projects\silverlight\YahooWheatherLib\obj\Debug\YahooWheatherLib.pdb
+D:\dropbox\Dropbox\George Robotics\YahooWheatherLib\bin\Debug\YahooWheatherLib.dll
+D:\dropbox\Dropbox\George Robotics\YahooWheatherLib\bin\Debug\YahooWheatherLib.pdb
+D:\dropbox\Dropbox\George Robotics\YahooWheatherLib\obj\Debug\ResolveAssemblyReference.cache
+D:\dropbox\Dropbox\George Robotics\YahooWheatherLib\obj\Debug\YahooWheatherLib.dll
+D:\dropbox\Dropbox\George Robotics\YahooWheatherLib\obj\Debug\YahooWheatherLib.pdb
