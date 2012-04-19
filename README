@@ -1,1 +1,14 @@
 Tinyweather is a library that allows to get information about weather from Yahoo.
+
+Example of using:
+
+	static void Main(string[] args)
+	{
+		Weather weather = new Weather("2123805");
+
+		CurrentWeather current = weather.GetCurrentWeather();
+		List<Forecast> forecast = weather.GetForecast();
+		Console.WriteLine(current.Humidity.ToString() + " " + current.LastUpdate);
+
+		Console.ReadLine();
+	}
