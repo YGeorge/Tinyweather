@@ -3,3 +3,9 @@ D:\Dropbox\Dropbox\George Robotics\YahooWheatherLib\bin\Release\Tinyweather.pdb
 D:\Dropbox\Dropbox\George Robotics\YahooWheatherLib\obj\Release\ResolveAssemblyReference.cache
 D:\Dropbox\Dropbox\George Robotics\YahooWheatherLib\obj\Release\Tinyweather.dll
 D:\Dropbox\Dropbox\George Robotics\YahooWheatherLib\obj\Release\Tinyweather.pdb
+D:\dropbox\Dropbox\George Robotics\Home Sweet Home\Tinyweather\bin\Release\Tinyweather.dll
+D:\dropbox\Dropbox\George Robotics\Home Sweet Home\Tinyweather\bin\Release\Tinyweather.pdb
+D:\dropbox\Dropbox\George Robotics\Home Sweet Home\Tinyweather\obj\Release\ResolveAssemblyReference.cache
+D:\dropbox\Dropbox\George Robotics\Home Sweet Home\Tinyweather\obj\Release\Tinyweather.dll
+D:\dropbox\Dropbox\George Robotics\Home Sweet Home\Tinyweather\obj\Release\Tinyweather.pdb
+D:\dropbox\Dropbox\George Robotics\Home Sweet Home\Tinyweather\bin\Release\Tinyweather.xml

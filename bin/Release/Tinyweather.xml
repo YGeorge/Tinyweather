@@ -22,5 +22,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Tinyweather.CurrentWeather.GetWeather(System.String,UnitsOfTemperature)">
+            <summary>
+            Gets the current wheather information.
+            </summary>
+            <returns></returns>
+        </member>
     </members>
 </doc>

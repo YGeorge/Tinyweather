@@ -1,0 +1,1 @@
+﻿public enum UnitsOfTemperature : byte { Celsius, Fahrenheit};

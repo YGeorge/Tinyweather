@@ -1,69 +1,58 @@
 ﻿using System;
+using System.Net;
+using System.IO;
+using System.Xml.Linq;
+using System.Collections.Generic;
+using System;
+using System.IO;
+using System.Linq;
 
 namespace Tinyweather
 {
     public class Forecast
     {
         private String _lastUpdate;
-        private String _day;
-        private String _date;
-        private Int16 _low;
-        private Int16 _high;
-        private String _description;
-        private Int16 _code;
+        private List<ForecastDay> _forecastDays = new List<ForecastDay>();
 
         public String LastUpdate
         {
             get { return _lastUpdate; }
             set { _lastUpdate = value; }
         }
-        public String Day
+
+        public List<ForecastDay> ForecastDays
         {
-            get { return _day; }
-            set { _day = value; }
-        }
-        public String Date
-        {
-            get { return _date; }
-            set { _date = value; }
-        }
-        public Int16 Low
-        {
-            get { return _low; }
-            set { _low = value; }
-        }
-        public Int16 High
-        {
-            get { return _high; }
-            set { _high = value; }
-        }
-        public String Description
-        {
-            get { return _description; }
-            set { _description = value; }
-        }
-        public Int16 Code
-        {
-            get { return _code; }
-            set { _code = value; }
+            get { return _forecastDays; }
+            set { _forecastDays = value; }
         }
 
         public Forecast() { }
-        public Forecast(String lastUpdate,
-                        String day,
-                        String date,
-                        Int16 low,
-                        Int16 high,
-                        String description,
-                        Int16 code)
+
+        public void GetForecast(Int32 locationID, UnitsOfTemperature unit)
         {
-            LastUpdate = lastUpdate;
-            Day = day;
-            Date = date;
-            Low = low;
-            High = high;
-            Description = description;
-            Code = code;
+            HttpWebRequest myReq =
+                (HttpWebRequest)WebRequest.Create("http://weather.yahooapis.com/forecastrss?w=" + locationID.ToString() + (unit == UnitsOfTemperature.Celsius ? "&u=c" : "&u=f"));
+            myReq.Method = "GET";
+            HttpWebResponse myResp = (HttpWebResponse)myReq.GetResponse();
+            Stream stream = myResp.GetResponseStream();
+            XDocument xmlResponse = XDocument.Load(stream);
+
+            foreach (XElement el in xmlResponse.Descendants().Where(e => e.Name.LocalName == "forecast"))
+            {
+                this.LastUpdate = xmlResponse.Descendants().Where(e => e.Name.LocalName == "lastBuildDate").FirstOrDefault().Value;
+
+                ForecastDay forecast = new ForecastDay();
+                forecast.Day = el.Attribute("day").Value;
+                forecast.Date = el.Attribute("date").Value;
+                forecast.Low = Int16.Parse(el.Attribute("low").Value);
+                forecast.High = Int16.Parse(el.Attribute("high").Value);
+                forecast.Description = el.Attribute("text").Value;
+                forecast.Code = Int16.Parse(el.Attribute("code").Value);
+
+                this._forecastDays.Add(forecast);
+            }
+            myResp.Close();
+            stream.Close();
         }
     }
 }
